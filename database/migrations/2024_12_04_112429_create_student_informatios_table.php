@@ -12,11 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('student_informatios', function (Blueprint $table) {
-            $table->id();
+        $table->id();
         $table->string('name');
         $table->string('rollNumber')->nullable();
         $table->string('batchNo')->nullable();
-        $table->date('age')->nullable();
+        $table->string('age')->nullable();
         $table->enum('gender',['male','female']);
         $table->string('email')->nullable();
         $table->string('phone')->nullable();
@@ -31,7 +31,7 @@ return new class extends Migration
         $table->string('department')->nullable();
         $table->string('guardiaName')->nullable();
         $table->string('guardianContact')->nullable();
-        $table->longText('attachment')->nullable();
+        $table->text('attachment')->nullable();
         $table->timestamps();
         });
     }
